@@ -16,6 +16,20 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+p {
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: white;
+}
+
 .container {
     min-height: 100vh;
     width: 100%;
@@ -161,11 +175,61 @@ a {
     line-height: 2.5rem;
     font-weight: 300;
     letter-spacing: .05rem;
+    text-align: left;
+    padding: 0 50px;
+    color:black;
 }
 
 #services .service-bottom {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+#services .service-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(img/img-1.png);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* l'amico friz mette un gradiente particolare */
+    background-color: black;
+    opacity: .4;
+    z-index: -1;
+}
+
+
+#services .service-item .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;   
+}
+
+#services .service-item h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: lightblue;
+}
+
 /* End Services Section */
 
 
